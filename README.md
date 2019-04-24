@@ -35,18 +35,18 @@ Example of `setup.py`
 
 ```python
 setup(
-    name='ocr_insurance_card',
+    name='your_project',
     version='v0.1',
     description='',
     long_description=readme(),
     classifiers=[
         'Programming Language :: Python :: 3',
     ],
-    url='https://gitlab.com/Yuji_Mti/ailabo_ocr_insurance',
-    author='MTI-AILab',
+    url='https://github.com/phucnsp/production_data_science_template',
+    author='Phuc_Su',
     author_email='',
-    license='MTI-AILab',
-    packages=['ocr_insurance_card'],
+    license='',
+    packages=['your_package'],
     install_requires=[
         'pypandoc>=1.4',
         'watermark>=1.5.0',
@@ -105,7 +105,7 @@ git commit -m "some message"
 git push -u origin HEAD
 ```
 
-## Notess
+## Notes
 
 - `requirements.txt` helps to setup your virtual environment, to make sure all contributors working on the same environments.  
 So whenever you have a new libraries need to install, after installing you need to add it into `requirements.txt` by  `pip freeze | grep -v <package_name> > requirements.txt`
@@ -132,7 +132,7 @@ Install the library
 ```bash
 conda create --name <environment_name> python=3.6
 source activate <environment_name>
-pip install -e 'git+https://gitlab.com/Yuji_Mti/ailabo_ocr.git'
+pip install -e 'git+https://github.com/phucnsp/production_data_science_template.git'
 ```
 > For a private repository accessible only through an SSH authentication, substitute `git+https://github.com` with `git+ssh://git@github.com`.  
 Note that `-e` argument above to make the installation editable.

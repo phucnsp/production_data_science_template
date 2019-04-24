@@ -26,7 +26,7 @@ Before we go any further, make sure you use the right global git configuration.
 Basically, the procedure is simple:
 
 1. Master is never touched
-2. you make a branch called `explore-*`, `refactor-*`, `fix-*`, `docs-*`, `feature-*`, `test-*`, etc, so the name explains what you did, `git checkout -b <branch-name>`
+2. you make a branch called `explore-*`, `refactor-*`, `test-*`, etc, so the name explains what you did, `git checkout -b <branch-name>`
 3. If you want to add large file into working area, please track it with LFS `git lfs track "path_to_large_file"` before adding it into stage area. (In detail, please read the part `Git large file storage` below)
 3. You commit your changes to that branch `git add .; git commit`
 4. You push to gitlab `git push -u origin HEAD`
@@ -144,7 +144,7 @@ Let's try to use a naming convention on the branches that branch from master. Th
 1. `explore-feature-*` Writing new code, a new feature or idea in exploration phase
 2. `explore-fix-*` or `explore-bug-*` Fixing a bug of some code in exploration phase
 3. `explore-doc-*` Detailing documentation of some code/part of a project in exploration phase
-4.  `explore-test-*` Testing something new in exploration phase
+4.  `test-*` Testing something 
 
 ## Collaboration in branches that are published to gitlab already
 

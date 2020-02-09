@@ -1,5 +1,5 @@
 from distutils.core import setup
-
+import setuptools
 
 def readme():
     """Import the README.md Markdown file and try to convert it to RST format."""
@@ -9,7 +9,9 @@ def readme():
     except(IOError, ImportError):
         with open('README.md') as readme_file:
             return readme_file.read()
-
+        
+with open("requirements.txt", "r") as fh:
+    requirements = [line.strip() for line in fh]
 
 setup(
     name='{{cookiecutter.package_name}}',
@@ -24,17 +26,7 @@ setup(
     author_email='{{cookiecutter.author_email}}',
     license='{{cookiecutter.package_license}}',
     packages=['{{cookiecutter.package_name}}'],
-    install_requires=[
-        'pypandoc>=1.4',
-        'watermark>=1.5.0',
-        'pandas>=0.20.3',
-        'scikit-learn>=0.19.0',
-        'scipy>=0.19.1',
-        'matplotlib>=2.1.0',
-        'pytest>=3.2.3',
-        'pytest-runner>=2.12.1',
-        'click>=6.7'
-    ],
+    install_requires=requirements,
     setup_requires=['pytest-runner'],
     tests_require=['pytest'],
 )
